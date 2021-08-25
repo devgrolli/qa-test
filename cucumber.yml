@@ -1,0 +1,9 @@
+# Template
+default: -p html_report -p json_report -p chrome
+
+# Reports
+html_report: --format pretty --format html --out=reports/features_report.html
+json_report: --format pretty --format json --out=reports/result.json
+
+# Browsers
+chrome: BROWSER=chrome

@@ -1,0 +1,44 @@
+cadastros:
+- :tag: name_exists
+  :user: alexis
+  :password: 123456
+  :password_repeat: 123456
+  :email: alexis_double@gmail.com
+  :mensagem: ERROR! Username already exists!
+
+- :tag: name_alphanumeric
+  :user: $#@$#
+  :password: 123456
+  :password_repeat: 123456
+  :email: alexis_double@gmail.com
+  :mensagem: ERROR! Username can only consist of Alphanumeric Characters!
+
+- :tag: different_passwords
+  :user: testeteste123
+  :password: 654321
+  :password_repeat: 123456
+  :email: teste_teste123@gmail.com
+  :mensagem: ERROR! Repeat Password must match Password!
+
+- :tag: username_no_letter
+  :user: 789797
+  :password: 123456
+  :password_repeat: 123456
+  :email: teste_teste123@gmail.com
+  :mensagem: ERROR! Username must contain at least one letter!
+
+- :tag: short_password
+  :user: testetestando
+  :password: 123
+  :password_repeat: 123
+  :email: teste_teste123@gmail.com
+  :mensagem: ERROR! Password must be a minimum of 6 characters!
+
+login:
+- :tag: login_send_recupera_senha
+  :email: desafio_ci&t@mailsac.com
+
+- :tag: login_recuperacao
+  :email: lucasdrums97@gmail.com
+  :senha: D#$@fioCI&T321
+  :user_email: desafio_ci&t  
