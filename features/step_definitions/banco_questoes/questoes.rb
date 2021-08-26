@@ -27,3 +27,26 @@ end
 Então('visualizo o controle de paginação') do
   expect($trivia_page.browse).to have_paginate
 end
+
+Quando('acessar a página de cadastro de questões') do
+  @home.acessar_new_questions
+end
+
+Quando('inserir os dados para nova questão {string}') do |temas|
+  @question = case temas
+              when 'comics' then Factory.comics_questions
+              when 'vehicles' then Factory.cars_questions
+              end
+  @browse = $trivia_page.browse
+  @browse.cadastrar_new_question(@question)
+  @home.acessar_page_dropdown_menu('edit_questions')
+end
+
+Então('questões deverão ser cadastradas com sucesso') do
+  expect(page).to have_content(/#{@question[:category]}/i)
+  expect(page).to have_content(/#{@question[:type]}/i)
+  expect(page).to have_content(/#{@question[:dificulty]}/i)
+  expect(page).to have_content(/#{@question[:question]}/i)
+  expect(page).to have_content(/#{@question[:corret]}/i)
+  expect(page).to have_content(/#{@question[:incorrect]}/i)
+end

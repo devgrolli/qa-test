@@ -35,10 +35,16 @@ cadastros:
   :mensagem: ERROR! Password must be a minimum of 6 characters!
 
 login:
-- :tag: login_send_recupera_senha
-  :email: desafio_ci&t@mailsac.com
+- :tag: login_default
+  :user: devgrolli
+  :senha: Tiranossauro321
 
-- :tag: login_recuperacao
-  :email: lucasdrums97@gmail.com
-  :senha: D#$@fioCI&T321
-  :user_email: desafio_ci&t  
+- :tag: login_password_error
+  :user: devgrolli
+  :senha: AUHEUAHEUAH
+  :mensagem: ERROR! Logging In Failed.  
+
+- :tag: login_confirm_email
+  :user: testgrolli
+  :senha: C0nnect321
+  :mensagem: ERROR! You need to verify your e-mail address before you can login.
