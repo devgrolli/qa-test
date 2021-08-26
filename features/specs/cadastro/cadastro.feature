@@ -1,5 +1,5 @@
 # language:pt
-@cadastro
+@cadastro @core
 Funcionalidade: Cadastro de usuário
   Eu como um usuário da aplicação
   Desejo realizar buscas no banco de questões
@@ -20,7 +20,7 @@ Funcionalidade: Cadastro de usuário
     E que acessa a página de cadastro
     Quando inserir os dados para validar erro no cadastro '<type_error>'
     E clicar em cadastrar
-    Então deverá exibir o alerta de erro ao tentar cadastrar
+    Então deverá exibir o alerta de erro ao tentar 'cadastrar'
 
     Exemplos:
       | type_error          |    
@@ -29,6 +29,3 @@ Funcionalidade: Cadastro de usuário
       | different_passwords |
       | username_no_letter  |
       | short_password      |
-
-    #ERROR! You need to verify your e-mail address before you can login. 
-

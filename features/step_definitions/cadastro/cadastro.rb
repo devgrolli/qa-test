@@ -24,8 +24,8 @@ Quando('inserir os dados para validar erro no cadastro {string}') do |type_error
   @cadastro.prencher_campos_exception(@massa_dado)
 end
 
-Então('deverá exibir o alerta de erro ao tentar cadastrar') do
-  expect($trivia_page.cadastro).to have_div_cadastro
+Então('deverá exibir o alerta de erro ao tentar {string}') do |action|
+  action == 'cadastrar' ? (expect($trivia_page.cadastro).to have_div_cadastro) : (expect($trivia_page.login).to have_div_login)
   expect(page).to have_content(/#{@massa_dado[:mensagem]}/i)
   puts "Mensagem error: #{@massa_dado[:mensagem]}"
 end
