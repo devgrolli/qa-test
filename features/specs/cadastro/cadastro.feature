@@ -1,9 +1,9 @@
 # language:pt
-@cadastro @core
+@cadastro @reg
 Funcionalidade: Cadastro de usuário
   Eu como um usuário da aplicação
-  Desejo realizar buscas no banco de questões
-  Para encontrar questões
+  Desejo realizar cadastro de usuário
+  Para poder logar na aplicação
 
   Contexto: 
     Dado que acesse a página inicial

@@ -7,4 +7,4 @@ json_report: --format pretty --format json --out=reports/result.json
 
 # Browsers
 chrome: BROWSER=chrome
-chrome_headless: BROWSER=chromeheadless
+chrome_headless: BROWSER=chrome_headless

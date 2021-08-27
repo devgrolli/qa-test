@@ -11,8 +11,6 @@ module PageTrivia
       element :btn_search, '[role="button"]'
       elements :select_type, '#type option'
       elements :table_linhas, 'table tbody tr'
-
-      # new question
       element :btn_cadastrar_question, '.btn-primary'
       element :input_question, '#trivia_question'
       element :input_awnser, '#correct_answer'

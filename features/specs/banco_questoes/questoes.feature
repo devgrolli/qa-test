@@ -1,5 +1,5 @@
 # language:pt
-@questoes @core
+@questoes @reg
 Funcionalidade: Busca no Banco de Questões
   Eu como um usuário da aplicação
   Desejo realizar buscas no banco de questões
@@ -14,7 +14,7 @@ Funcionalidade: Busca no Banco de Questões
     Então visualizo uma mensagem de erro com o texto 'No questions found.'
 
   @busca_questions
-  Cenário: Busca por questão inexistente
+  Cenário: Busca por questão com resultados
     Dado que acesse a página inicial
     E que navego para a página de busca do banco de questões
     E digito 'Science: Computers' no campo de busca
@@ -24,7 +24,7 @@ Funcionalidade: Busca no Banco de Questões
     E visualizo o controle de paginação
 
   @cadastro_questions
-  Esquema do Cenário: Cadastrar nova questão
+  Esquema do Cenário: Cadastrar novas questões
     Dado que acesse a página login
     Quando preencher os dados para login 'login_default'
     E clico no botão de entrar

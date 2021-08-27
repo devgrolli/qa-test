@@ -1,11 +1,11 @@
 # language:pt
-@login @core
+@login @reg
 Funcionalidade: Login
   Eu como um usuário da aplicação
-  Desejo realizar buscas no banco de questões
-  Para encontrar questões
+  Desejo realizar o login
+  Para poder executar funções de usuário na aplicação
 
-  @logar
+  @realizar_login
   Cenário: Realizar login na aplicação
     Dado que acesse a página login
     Quando preencher os dados para login 'login_default'
@@ -20,7 +20,6 @@ Funcionalidade: Login
     Então deverá exibir o alerta de erro ao tentar 'logar'
 
     Exemplos:
-      | type_exception       |    
+      | type_exception       |
       | login_password_error |
       | login_confirm_email  |
-

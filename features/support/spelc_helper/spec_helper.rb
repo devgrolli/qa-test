@@ -18,10 +18,6 @@ module PageTrivia
       def cadastro
         PageTrivia::Cadastro::Cadastro.new
       end
-
-      def mailsac
-        PageTrivia::MailSac::MailSac.new
-      end
     end
   end
 end
