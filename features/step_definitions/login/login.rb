@@ -25,21 +25,7 @@ Quando('realizar login no site {string}') do |login|
   "
 end
 
-Quando('acessar página de troca de senha') do
-  @home.acessar_page_dropdown_menu('password')
-end
-
-Quando('alterar a senha do usuário') do
-  @home.alterar_senha(@massa_dado, 'alteracao')
-end
-
 Então('deverá exibir alerta de senha alterada com sucesso') do
   expect($trivia_page.home).to have_div_alert_sucesso
   expect(page).to have_content(/#{@massa_dado[:mensagem]}/i)
-end
-
-Então('altero novamente para a senha antiga') do
-  step 'acessar página de troca de senha'
-  @home.alterar_senha(@massa_dado, 'retornar_senha')
-  step 'usuário deverá estar logado na aplicação'
 end

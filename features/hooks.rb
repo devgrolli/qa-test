@@ -45,7 +45,7 @@ at_exit do
   time.localtime
   date = DateTime.now.to_date
   date = date.to_s
-  Date.strptime(date, '%Y-%m-%d')
+  @now = Date.strptime(date, '%Y-%m-%d')
 
   ReportBuilder.configure do |config|
     nome = 'Desafio CI&T'
@@ -61,7 +61,8 @@ at_exit do
     config.include_images = true
     config.additional_css = 'features\support\css_report_builder.css'
     config.additional_info = {
-      'URL' => URL['urls'],
+      'URL' => URL,
+      'Data' => @now.strftime('%d/%m/%Y'),
       'Projeto' => nome
     }
   end
