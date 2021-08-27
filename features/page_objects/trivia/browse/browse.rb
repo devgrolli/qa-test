@@ -17,7 +17,7 @@ module PageTrivia
       element :input_incorret, '#incorrect_answer_1'
       element :input_reference, '#trivia_reference'
       elements :select_categorias, '#trivia_category option'
-      elements :select_type, '#trivia_type option'
+      elements :select_type_add, '#trivia_type option'
       elements :select_difficulty, '#trivia_difficulty option'
 
       def acessar_login
@@ -26,7 +26,7 @@ module PageTrivia
       end
 
       def selecionar_type(type_select)
-        select_type.select { |type| type.click if type.text == type_select }
+        select_type.find { |type| type.click if type.text == type_select }
       end
 
       def buscar_questions(text_search)
@@ -43,7 +43,7 @@ module PageTrivia
 
       def cadastrar_new_question(question)
         select_categorias.select { |categorias| categorias.click if categorias.text == question[:category] }
-        select_type.select { |type| type.click if type.text == question[:type] }
+        select_type_add.select { |type| type.click if type.text == question[:type] }
         select_difficulty.select { |dificuldade| dificuldade.click if dificuldade.text == question[:dificulty] }
         input_question.set question[:question]
         input_awnser.set question[:corret]
