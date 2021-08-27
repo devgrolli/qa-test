@@ -1,7 +1,9 @@
 require 'faker'
 require 'documentos_br'
 
+# Class para geracao de massas de dados faker para cenarios
 class Factory
+  # Metodo para geracao massa no Cadastro
   def self.cadastro
     {
       name: Faker::Name.first_name,
@@ -10,6 +12,7 @@ class Factory
     }
   end
 
+  # Metodo para geracao massa de questoes do tema 'comics'
   def self.comics_questions
     {
       category: 'Entertainment: Comics',
@@ -22,6 +25,7 @@ class Factory
     }
   end
 
+  # Metodo para geracao massa de questoes do tema 'veiculos'
   def self.cars_questions
     {
       category: 'Vehicles',
