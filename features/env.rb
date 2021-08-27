@@ -23,12 +23,13 @@ Capybara.register_driver :site_prism do |app|
       --acceptInsecureCerts=true
       --disable-impl-side-painting
       --debug_level=3
-    ])
+    ]
+  )
   if BROWSER == 'chrome_headless'
     options.args.merge([
-      "--headless",
-      "--disable-dev-shm-usage",
-    ])
+                         '--headless',
+                         '--disable-dev-shm-usage'
+                       ])
   end
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
